@@ -23,6 +23,8 @@ var carDetails = {
 
 //Code Here
 
+let {color, make, model, year} = carDetails
+
 
 
 ////////// PROBLEM 2 //////////
@@ -35,6 +37,8 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
+
+  const {firstName, lastName, title} = obj
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -55,7 +59,11 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function totalPopulation(obj){
+  let {utah, california, texas, arizona} = obj
+  let sum = utah + california + texas + arizona
+  return sum
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -68,7 +76,16 @@ function greeting( obj ) {
 */
 
 //Code Here
+function ingredients(obj){
 
+  let {carb, fat, protein} = obj
+  let newArr = []
+  newArr.push(carb)
+  newArr.push(fat)
+  newArr.push(protein)
+  
+  return newArr
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -87,7 +104,9 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function largeNumbers({first, second, third}){
+  return Math.min(first, second, third)
+}
 
 ////////// PROBLEM 6 //////////
 
@@ -97,6 +116,14 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
+// Code Here
 
-
+function numberGroups({a,b,c}){
+  if (a.length > b.length && a.length > c.length){
+    return a
+  } else if (b.length> a.length && b.length > c.length){
+    return b
+  } else{
+    return c
+  }
+}
